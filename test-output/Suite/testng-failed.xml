@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browser" value="ch"/>
+  <test name="Chrome(failed)">
+    <parameter name="browser" value="ch"/>
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Scripts.mainscript">
+        <methods>
+          <include name="browserselection"/>
+          <include name="closeftn"/>
+          <include name="scripting" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Scripts.mainscript -->
+    </classes>
+  </test> <!-- Chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
