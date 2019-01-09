@@ -3,245 +3,97 @@
   <groupId>Login</groupId>
   <artifactId>login</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-<dependencies>
+<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<build>
+		<plugins>
 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+		<dependency>
 
-<dependency>
+			<groupId>org.apache.poi</groupId>
 
-<groupId>log4j</groupId>
+			<artifactId>poi</artifactId>
 
-<artifactId>log4j</artifactId>
+			<version>3.17-beta1</version>
 
-<version>1.2.17</version>
+		</dependency>
 
-</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.11.0</version>
-</dependency>
 
 
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-server</artifactId>
-    <version>3.11.0</version>
-</dependency>
+		<dependency>
 
+			<groupId>org.apache.poi</groupId>
 
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-api</artifactId>
-    <version>3.11.0</version>
-</dependency>
+			<artifactId>poi-ooxml</artifactId>
 
+			<version>3.16</version>
 
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
 
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-remote-driver</artifactId>
-    <version>3.11.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-remote-driver</artifactId>
-    <version>2.53.1</version>
-</dependency>
 
 
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>2.53.0</version>
-</dependency>
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-api</artifactId>
-    <version>2.53.1</version>
-</dependency>
- <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
 
+			<groupId>org.apache.poi</groupId>
 
+			<artifactId>poi-ooxml-schemas</artifactId>
 
-<dependency>
+			<version>3.16</version>
 
-<groupId>org.apache.poi</groupId>
+		</dependency>
+		<dependency>
 
-<artifactId>poi</artifactId>
+			<groupId>org.testng</groupId>
 
-<version>3.17-beta1</version>
+			<artifactId>testng</artifactId>
 
-</dependency>
+			<version>6.9.8</version>
 
+			<scope>compile</scope>
 
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		</dependency>
+		<dependency>
 
+			<groupId>com.relevantcodes</groupId>
 
+			<artifactId>extentreports</artifactId>
 
-<dependency>
+			<version>2.41.1</version>
 
-<groupId>org.apache.poi</groupId>
-
-<artifactId>poi-ooxml</artifactId>
-
-<version>3.16</version>
-
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
-
-
-
-<dependency>
-
-<groupId>org.apache.poi</groupId>
-
-<artifactId>poi-ooxml-schemas</artifactId>
-
-<version>3.16</version>
-
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-chrome-driver</artifactId>
-    <version>3.11.0</version>
-</dependency>
-
-
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-
-
-
-<dependency>
-
-<groupId>org.testng</groupId>
-
-<artifactId>testng</artifactId>
-
-<version>6.11</version>
-
-<scope>compile</scope>
-
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-firefox-driver</artifactId>
-    <version>3.11.0</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-remote-driver</artifactId>
-    <version>3.11.0</version>
-</dependency>
-
-
-<dependency>
-
-<groupId>org.testng</groupId>
-
-<artifactId>testng</artifactId>
-
-<version>6.1.1</version>
-
-<scope>compile</scope>
-
-</dependency>
-
-
-<dependency>
-
-<groupId>com.relevantcodes</groupId>
-
-<artifactId>extentreports</artifactId>
-
-<version>2.41.1</version>
-
-</dependency>
-<dependency>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-compiler-plugin</artifactId>
 			<version>2.3.2</version>
 		</dependency>
-
-</dependencies>
-<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <suiteFile></suiteFile>
-</properties>
-<build>
-  <plugins>
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>2.18.1</version>
-    <configuration>
-        <suiteXmlFiles>
-            <suiteXmlFile>${suiteFile}</suiteXmlFile>
-        </suiteXmlFiles>
-    </configuration>
-</plugin>
-
- 
-            
-<plugin>
-             <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.8.0</version>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.0</version>
-            <configuration>
-                
-               
-            </configuration>
-        </plugin>
-        <!-- This is just to make sure the class is set as main class to execute from the jar-->
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-shade-plugin</artifactId>
-            <version>3.1.0</version>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>shade</goal>
-                    </goals>
-                    <configuration>
-                        <transformers>
-                            <transformer
-                                    implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                            <transformer
-                                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                <mainClass>com.stackoverflow.nullpointer.expression.SwitchExpressions</mainClass>
-                            </transformer>
-                        </transformers>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-       
-  </plugins>
-</build>
+		
+	</dependencies>
 </project>
